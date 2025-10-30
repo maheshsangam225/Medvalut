@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedVault Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container register-container">
+        <h2>Create Your MedVault Account</h2>
+
+        <div class="tab-buttons">
+            <button class="tab-link active" onclick="openTab(event, 'Patient')">Patient</button>
+            <button class="tab-link" onclick="openTab(event, 'Doctor')">Doctor</button>
+            <!-- <button class="tab-link" onclick="openTab(event, 'Admin')">Admin</button> -->
+        </div>
+
+        <div id="Patient" class="tab-content" style="display:block;">
+            <h3>Patient Registration</h3>
+            <form id="patient-reg-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="p-firstName">First Name</label>
+                        <input type="text" id="p-firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p-lastName">Last Name</label>
+                        <input type="text" id="p-lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="p-email">Email</label>
+                    <input type="email" id="p-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="p-password">Password</label>
+                    <input type="password" id="p-password" name="password" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="p-gender">Gender</label>
+                        <select id="p-gender" name="gender" required>
+                            <option value="">Select...</option>
+                            <option value="MALE">Male</option>
+                            <option value="FEMALE">Female</option>
+                            <option value="OTHER">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="p-dateOfBirth">Date of Birth</label>
+                        <input type="date" id="p-dateOfBirth" name="dateOfBirth" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="p-address">Address</label>
+                    <input type="text" id="p-address" name="address" required>
+                </div>
+                 <div class="form-row">
+                    <div class="form-group">
+                        <label for="p-phoneNumber">Phone Number</label>
+                        <input type="tel" id="p-phoneNumber" name="phoneNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p-emergencyContact">Emergency Contact</label>
+                        <input type="tel" id="p-emergencyContact" name="emergencyContact" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Register as Patient</button>
+            </form>
+        </div>
+
+        <div id="Doctor" class="tab-content">
+            <h3>Doctor Registration</h3>
+            <form id="doctor-reg-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="d-firstName">First Name</label>
+                        <input type="text" id="d-firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="d-lastName">Last Name</label>
+                        <input type="text" id="d-lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="d-email">Email</label>
+                    <input type="email" id="d-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="d-password">Password</label>
+                    <input type="password" id="d-password" name="password" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="d-gender">Gender</label>
+                        <select id="d-gender" name="gender" required>
+                            <option value="">Select...</option>
+                            <option value="MALE">Male</option>
+                            <option value="FEMALE">Female</option>
+                            <option value="OTHER">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="d-dateOfBirth">Date of Birth</label>
+                        <input type="date" id="d-dateOfBirth" name="dateOfBirth" required>
+                    </div>
+                </div>
+               <!-- /* <div class="form-group">
+                    <label for="d-address">Address</label>
+                    <input type="text" id="d-address" name="address" required>
+                </div>
+                 <div class="form-row">
+                    <div class="form-group">
+                        <label for="d-phoneNumber">Phone Number</label>
+                        <input type="tel" id="d-phoneNumber" name="phoneNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="d-emergencyContact">Emergency Contact</label>
+                        <input type="tel" id="d-emergencyContact" name="emergencyContact" required>
+                    </div>
+                </div> 
+                */ -->
+                <hr style="border: 1px solid #eee; margin: 1.5rem 0;">
+                <div class="form-group">
+                    <label for="d-specialty">Specialization</label>
+                    <input type="text" id="d-specialty" name="specialty" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="d-license">Medical License No.</label>
+                        <input type="text" id="d-license" name="license" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="d-hospitalName">Hospital Name</label>
+                        <input type="text" id="d-hospitalName" name="hospitalName" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Register as Doctor</button>
+            </form>
+        </div>
+
+
+        <div id="api-message" class="api-message"></div>
+
+        <p class="toggle-link">
+            Already have an account? <a href="login.html">Login here</a>
+        </p>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

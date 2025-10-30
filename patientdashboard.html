@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>MedVault</h1>
+        <button id="logout-button" class="btn btn-secondary">Logout</button>
+    </header>
+
+    <main class="dashboard-container">
+        <h2 id="welcome-message">Loading dashboard...</h2>
+        
+        <section class="dashboard-section">
+            <h3>Book a New Appointment</h3>
+            <form id="book-appointment-form">
+                <div class="form-group">
+                    <label for="doctor-list">Select a Doctor</label>
+                    <select id="doctor-list" required>
+                        <option value="">Loading doctors...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-date">Select Date and Time</label>
+                    <input type="datetime-local" id="appointment-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-reason">Reason for Visit (Symptoms, etc.)</label>
+                    <textarea id="appointment-reason" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Book Appointment</button>
+            </form>
+        </section>
+
+        <section class="dashboard-section">
+            <h3>My Appointments</h3>
+            <div id="my-appointments-list">
+                <p>Loading your appointments...</p>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- <script src="patientdashboard.js"></script> -->
+</body>
+</html>

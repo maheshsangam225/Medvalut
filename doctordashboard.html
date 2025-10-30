@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>MedVault</h1>
+        <button id="logout-button" class="btn btn-secondary">Logout</button>
+    </header>
+
+    <main class="dashboard-container">
+        <h2 id="welcome-message">Loading dashboard...</h2>
+        
+        <section class="dashboard-section">
+            <h3>New Appointment Requests</h3>
+            <div id="pending-appointments-list">
+                <p>Loading pending appointments...</p>
+            </div>
+        </section>
+
+        <section class="dashboard-section">
+            <h3>All Other Appointments</h3>
+            <div id="past-appointments-list">
+                <p>Loading past appointments...</p>
+            </div>
+        </section>
+
+    </main>
+    
+<script src="doctordashboard.js"></script>
+</body>
+</html>
